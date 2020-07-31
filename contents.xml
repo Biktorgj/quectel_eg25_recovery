@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+==========================================================================
+
+  contents.xml
+
+  General Description
+     Contains information about component builds for this target.
+
+ Copyright (c) 2011-2011 by Qualcomm Technologies, Incorporated.
+ All Rights Reserved.
+ QUALCOMM Proprietary/GTDR
+
+==========================================================================
+ 
+ $Header: //depot/asic/mdm9x45/MDM9640.LE.2.0/meta/contents_template.xml $
+ $DateTime: 2014/06/23 15:00:45 $
+ $Change: 1775114 $
+==========================================================================
+-->
+<contents>
+  <product_info>
+    <product_name>MDM9607.LE.1.0</product_name>
+    <hlos_type cmm_var="HLOS_TYPE">LE</hlos_type> 
+  <chipid cmm_var="CHIPID">MDM9607</chipid>
+  </product_info>
+  <builds_flat>
+    <!-- This section contains a list of all component builds -->
+    <build>
+      <!-- Name of this build -->
+      <name>common</name>
+      <!--HW Chipset for this build (QC-Internal) -->
+      <role>common</role>
+	  <chipset>MDM9607</chipset>
+      <!-- Build ID for this build (QC-Internal) -->
+      <build_id></build_id>
+      <!-- Path to root of this build, on Windows -->
+      <!-- All paths must end in a slash.  All absolute paths
+      must begin with a slash, or drive-letter, colon, slash.  All
+      relative paths must begin with a name. -->
+      <windows_root_path>.\</windows_root_path>
+      <!-- Path to root of this build, on Linux -->
+      <linux_root_path>./</linux_root_path>
+      <!-- Name of top-level, or 'image' directory for this build. -->
+      <image_dir>update</image_dir>
+      <partition_file>
+        <!-- The partition_file section points to the main partition xml file
+        This is used by QPST during its download operation -->
+        <file_name >partition_nand.xml</file_name>
+        <file_path>update/</file_path>
+      </partition_file>
+ </build> 
+ <build>
+      <name>glue</name>
+      <role>glue</role>
+      <chipset>mdm9607</chipset>
+      <build_id></build_id>
+      <windows_root_path>.\</windows_root_path>
+      <linux_root_path>./</linux_root_path>
+      <image_dir>update</image_dir>
+    </build>
+    <build>
+      <name>apps</name>
+	    <role>apps</role>
+	    <chipset>MDM9607</chipset>
+      <build_id></build_id>
+      <!-- The 'cmm_root_path_var' attribute names a CMM variable that will be initialized to
+      the value of this element by the gen_cmm_data.py script.  This is used by the
+      Trace32 scripts to find other builds. -->
+      <windows_root_path cmm_root_path_var="APSS_BUILDROOT">.\</windows_root_path>
+      <linux_root_path cmm_root_path_var="APSS_BUILDROOT">./</linux_root_path>
+      <image_dir>update</image_dir>
+     <download_file cmm_file_var="APSSBOOT_BINARY" minimized="true">
+        <file_name>appsboot.mbn</file_name>
+        <file_path>update/</file_path>
+      </download_file>	  
+  </build> 
+	<build>
+      <name>tz</name>
+      <role>tz</role>
+      <chipset>MDM9607</chipset>
+      <build_id></build_id>
+      <windows_root_path cmm_root_path_var="TZ_BUILDROOT">.\</windows_root_path>
+	<linux_root_path cmm_root_path_var="TZ_BUILDROOT">./</linux_root_path>
+      <image_dir>update</image_dir>
+	  <download_file cmm_file_var="TZ_BINARY" minimized="true" get_binary="True">
+        <file_name>tz.mbn</file_name>
+        <file_path>update/</file_path>
+      </download_file>
+	</build>
+    <build>
+      <name>boot</name>
+	    <role>boot</role>
+	    <chipset>MDM9607</chipset>
+      <build_id></build_id>
+      <windows_root_path cmm_root_path_var="BOOT_BUILDROOT">.\</windows_root_path>
+      <linux_root_path cmm_root_path_var="BOOT_BUILDROOT">./</linux_root_path>
+      <image_dir>boot_images</image_dir>
+	  <flash_programmer minimized = "true" get_binary="True">
+        <!-- The flash_programmer section points to the flash programmer.  This information
+        is used by QPST when downloading a build. -->
+        <file_name>NPRG9x07.mbn</file_name>
+        <file_path>update/</file_path>
+      </flash_programmer>
+      <download_file cmm_file_var="BOOT_BINARY" minimized="true" get_binary="True" fastboot_complete="sbl">
+        <file_name>sbl1.mbn</file_name>
+        <file_path>update/</file_path>
+      </download_file>
+      </build>
+ 
+    <build>
+      <name>rpm</name>
+	    <role>rpm</role>
+	    <chipset>MDM9607</chipset>
+      <build_id></build_id>
+      <windows_root_path cmm_root_path_var="RPM_BUILDROOT">.\</windows_root_path>
+      <linux_root_path cmm_root_path_var="RPM_BUILDROOT">./</linux_root_path>
+      <image_dir>update</image_dir>
+	  <download_file cmm_file_var="RPM_BINARY" minimized="true" get_binary="True" fastboot_complete="rpm">
+        <file_name>rpm.mbn</file_name>
+        <file_path>update/</file_path>
+      </download_file>
+	</build>
+	
+    </builds_flat>	
+
+
+</contents>

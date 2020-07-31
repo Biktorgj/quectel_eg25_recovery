@@ -1,0 +1,8 @@
+[Unit]
+Description=EG25-G Firmware Update Service
+
+[Service]
+ExecStart=@RELEASE_DIR/install.sh @RELEASE_DIR fulfil
+
+[Install]
+WantedBy=multi-user.target
