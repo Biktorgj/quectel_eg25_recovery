@@ -14,7 +14,7 @@ To check if you're currently booted in EDL mode, run `lsusb` and inspect the out
 Once in EDL mode, open a terminal and go to the root directory of this repository, and run:
 
 If you use an ARM64 distro (most likely)
-./qfirehose_arm64 -f ./
+./qfirehose -f ./
 
 If you use an ARMHF (32 bit) distro:
 ./qfirehose_armhf -f ./
