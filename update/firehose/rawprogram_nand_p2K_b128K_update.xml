@@ -16,12 +16,14 @@
   <program PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" filename="..\mdm9607-boot.img" num_partition_sectors="3968" physical_partition_number="0" start_sector="20288"/>
   <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="27392" physical_partition_number="0" start_sector="24256"/>
   <program PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" filename="..\NON-HLOS.ubi" num_partition_sectors="27392" physical_partition_number="0" start_sector="24256"/>
-  <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="10368" physical_partition_number="0" start_sector="51968"/>
-  <program PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" filename="..\mdm9607-recovery.ubi" num_partition_sectors="10368" physical_partition_number="0" start_sector="51968"/>
-  <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="31488" physical_partition_number="0" start_sector="62336"/>
-  <program PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" filename="..\usrdata.ubi" num_partition_sectors="31488" physical_partition_number="0" start_sector="62336"/>
-  <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="36992" physical_partition_number="0" start_sector="94080"/>
-  <program PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" filename="..\mdm9607-sysfs.ubi" num_partition_sectors="36992" physical_partition_number="0" start_sector="94080"/>
+  <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="5632" physical_partition_number="0" start_sector="51968"/>
+  <program PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" filename="..\mdm9607-recovery.ubi" num_partition_sectors="5632" physical_partition_number="0" start_sector="51968"/>
+  <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="25600" physical_partition_number="0" start_sector="57600"/>
+  <program PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" filename="..\usrdata.ubi" num_partition_sectors="25600" physical_partition_number="0" start_sector="57600"/>
+  <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="11008" physical_partition_number="0" start_sector="83200"/>
+  <program PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" filename="..\data.ubi" num_partition_sectors="11008" physical_partition_number="0" start_sector="83200"/>
+  <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="36608" physical_partition_number="0" start_sector="94464"/>
+  <program PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" filename="..\mdm9607-sysfs.ubi" num_partition_sectors="36608" physical_partition_number="0" start_sector="94464"/>
   <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="768" physical_partition_number="0" start_sector="13184"/>
   <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="640" physical_partition_number="0" start_sector="640"/>
   <erase PAGES_PER_BLOCK="64" SECTOR_SIZE_IN_BYTES="2048" num_partition_sectors="640" physical_partition_number="0" start_sector="0"/>
