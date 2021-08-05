@@ -146,7 +146,7 @@
 		</partition>
 		<partition>
 			<name length="16" type="string">0:recoveryfs</name>
-			<size_kb length="4">11008</size_kb>
+			<size_kb length="4">20480</size_kb>
 			<pad_kb length="4">256</pad_kb>
 			<which_flash>0</which_flash>
 			<attr>0xFF</attr>
@@ -157,7 +157,7 @@
 		</partition>
 		<partition>
 			<name length="16" type="string">0:usr_data</name>
-			<size_kb length="4">50688</size_kb>
+			<size_kb length="4">62464</size_kb>
 			<pad_kb length="4">512</pad_kb>
 			<which_flash>0</which_flash>
 			<attr>0xFF</attr>
@@ -165,17 +165,6 @@
 			<attr>0x00</attr>
 			<attr>0xFF</attr>
 			<img_name type="string">usrdata.ubi</img_name>
-		</partition>
-		<partition>
-			<name length="16" type="string">0:data</name>
-			<size_kb length="4">21504</size_kb>
-			<pad_kb length="4">512</pad_kb>
-			<which_flash>0</which_flash>
-			<attr>0xFF</attr>
-			<attr>0x01</attr>
-			<attr>0x00</attr>
-			<attr>0xFF</attr>
-			<img_name type="string">data.ubi</img_name>
 		</partition>
 		<partition>
 			<name length="16" type="string">0:sec</name>
