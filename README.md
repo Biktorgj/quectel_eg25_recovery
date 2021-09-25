@@ -10,7 +10,7 @@ If your modem is currently running the stock firmware, you will need to [unlock 
 If you are running biktor's firmware, you can simply run `sudo mmcli -m any --command="AT+ADBON"` to enable ADB.
 
 Once ADB access is enabled, execute `adb reboot edl`.
-If you receive an error `adb: insufficient permissions for device`, run `adb kill-server` and then run `sudo adb reboot edl`.
+If adb exits with `adb: insufficient permissions for device`, run `adb kill-server` and then run `sudo adb reboot edl`.
 ### Enter EDL with test points
 If your modem is not able to boot, you will need to open your PinePhone to expose the rear of the PCB in order to short two test points. This will require you to remove the screws under the rear cover.
 ![Pinephone Mainboard](https://raw.githubusercontent.com/biktorgj/quectel_eg25_recovery/EG25GGBR07A08M2G_01.002.01.002/board.jpg)
@@ -27,11 +27,11 @@ Once in EDL mode, open a terminal and go to the root directory of this repositor
 
 If you use an ARM64 distro (most likely), run:
 
-`./qfirehose -f ./`
+`sudo ./qfirehose -f ./`
 
 If you use an ARMHF distro (confirm with `uname -m`), run:
 
-`./qfirehose_armhf -f ./`
+`sudo ./qfirehose_armhf -f ./`
 
 Once it finishes, it will reboot the modem and after about 30 seconds you should be back up and running!
 
