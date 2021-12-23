@@ -37,4 +37,12 @@ Once it finishes, it will reboot the modem and after about 30 seconds you should
 
 It should be noted that qfirehose often fails flashing. In this event, you can try re-running qfirehose. However, you may also need to reboot the modem by either rebooting the PinePhone, or toggling the modem killswitch and running `sudo systemctl restart eg25-manager`.
 ## Quirks
-It has been noted that there can be issues running qfirehose on certain distributions. If qfirehose fails repeatedly, it is recommended that you try either [Mobian](https://mobian-project.org/) or [postmarketOS](http://postmarketos.org/download/).
+It has been noted that there can be issues running qfirehose on certain distributions. If qfirehose fails repeatedly, try to stop ModemManager before attempting the update:
+* If using systemd based distros (Mobian, Manjaro, Arch...): 
+  
+  `sudo systemctl stop ModemManager && sudo ./qfirehose -f . && sudo systemctl start ModemManager`
+* If using openrc based distros (postmarketOS for example): 
+  
+  `sudo rc-service modemmanager stop && sudo ./qfirehose -f ./ && sudo rc-service modemmanager start`
+
+If you are still unable to flash it, [Mobian](https://mobian-project.org/) and [postmarketOS](http://postmarketos.org/download/) have been tested to work without issues
