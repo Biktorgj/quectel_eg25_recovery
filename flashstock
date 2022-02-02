@@ -6,10 +6,11 @@ fastboot oem stay
 echo "Waiting to settle..."
 sleep 2
 echo "Start flashing!"
-fastboot flash aboot appsboot.mbn || exit "Failed to flash the bootloader"
-fastboot flash:raw boot mdm9607-boot.img || exit "Failed to flash main kernel"
-fastboot flash:raw recovery mdm9607-boot.img || exit "Failed to flash recovery kernel"
-fastboot flash system mdm9607-sysfs.ubi || exit "Failed to flash the system partition"
-fastboot flash recoveryfs mdm9607-recovery.ubi || exit "Failed to flash the recovery partition"
+fastboot flash aboot update/appsboot.mbn || exit "Failed to flash the bootloader"
+fastboot flash:raw boot update/mdm9607-boot.img || exit "Failed to flash main kernel"
+fastboot flash:raw recovery update/mdm9607-boot.img || exit "Failed to flash recovery kernel"
+fastboot flash system update/mdm9607-sysfs.ubi || exit "Failed to flash the system partition"
+fastboot flash recoveryfs update/mdm9607-recovery.ubi || exit "Failed to flash the recovery partition"
+fastboot flash modem update/NON-HLOS.ubi || exit "Failed to flash ADSP firmware"
 fastboot reboot
 echo "Done!"
