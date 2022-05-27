@@ -157,7 +157,7 @@
 		</partition>
 		<partition>
 			<name length="16" type="string">0:usr_data</name>
-			<size_kb length="4">62464</size_kb>
+			<size_kb length="4">60928</size_kb>
 			<pad_kb length="4">512</pad_kb>
 			<which_flash>0</which_flash>
 			<attr>0xFF</attr>
