@@ -1,7 +1,7 @@
 # Stock firmware recovery for Quectel EG25-G
 This repo contains all the firmware versions we have found for the Quectel EG25-G Modem.
 
-There are three ways of flashing these:
+There are two ways of flashing these:
 1. Via fastboot, if the modem is working correctly.
 2. With EDL, if the modem doesn't boot, or if you want to make sure *everything* in the package is installed.
 
