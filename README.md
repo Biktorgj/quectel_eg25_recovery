@@ -1,6 +1,18 @@
-# Restore stock firmware for Quectel EG25-G
+# Stock firmware recovery for Quectel EG25-G
+This repo contains all the firmware versions we have found for the Quectel EG25-G Modem.
 
-## Entering EDL Mode
+There are three ways of flashing these:
+1. Via fastboot, if the modem is working correctly.
+2. With EDL, if the modem doesn't boot, or if you want to make sure *everything* in the package is installed.
+
+## Flashing with fastboot:
+1. Make sure you have `fastboot` installed in your host system
+2. Unpack or clone this repo
+3. Open a root terminal, and in the folder where you extracted the firmware, run: `./flashstock`
+
+## Flashing with qfirehose in EDL mode
+
+### Entering EDL Mode
 In order to flash the stock firmware to your modem, you will need to enter EDL mode.
 ### Enter EDL with ADB
 If your modem is currently functioning and able to boot into its firmware, you can enter EDL mode by issuing a command over ADB.
